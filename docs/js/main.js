@@ -54,6 +54,13 @@ let drawTextToCanvas = function (text) {
   ctx.fillText(text, canvas.width / 2, 32);
 };
 
+// onload func (create first dungeon)
+window.onload = function () {
+  let dungeon = new DungeonMap(48, 48);
+  dungeon.createDungeon(48, 48, 8);
+  drawDungeon(dungeon);
+};
+
 // create button - onclick
 createButton.addEventListener('click', (e) => {
   // input error check
